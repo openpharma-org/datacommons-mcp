@@ -1,5 +1,5 @@
 {
-  "name": "@uh-joan/datacommons-mcp",
+  "name": "@openpharma-org/datacommons-mcp",
   "version": "1.0.0",
   "description": "MCP server for Data Commons - statistical and demographic data access. Provides search and retrieval of population statistics, disease burden data, epidemiological indicators, and economic metrics from Data Commons Knowledge Graph.",
   "main": "src/index.js",
@@ -24,7 +24,7 @@
     "economic-indicators",
     "model-context-protocol"
   ],
-  "author": "Joan <uh-joan>",
+  "author": "OpenPharma Contributors",
   "license": "MIT",
   "type": "commonjs",
   "dependencies": {
