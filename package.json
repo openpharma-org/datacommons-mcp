@@ -1,0 +1,42 @@
+{
+  "name": "@uh-joan/datacommons-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Data Commons - statistical and demographic data access. Provides search and retrieval of population statistics, disease burden data, epidemiological indicators, and economic metrics from Data Commons Knowledge Graph.",
+  "main": "src/index.js",
+  "bin": {
+    "datacommons-mcp": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "build": "mkdir -p dist && cp -r src/* dist/",
+    "prebuild": "rm -rf dist"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "datacommons",
+    "data-commons",
+    "statistics",
+    "demographics",
+    "epidemiology",
+    "population-data",
+    "disease-burden",
+    "economic-indicators",
+    "model-context-protocol"
+  ],
+  "author": "Joan <uh-joan>",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "axios": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ]
+}
