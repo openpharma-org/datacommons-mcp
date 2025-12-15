@@ -29,8 +29,8 @@ Add to your MCP client configuration (e.g., Claude Desktop):
 {
   "mcpServers": {
     "datacommons": {
-      "command": "npx",
-      "args": ["@openpharma-org/datacommons-mcp"],
+      "command": "node",
+      "args": ["path/to/datacommons-mcp/src/index.js"],
       "env": {
         "DC_API_KEY": "your_api_key_here"
       }
@@ -253,38 +253,6 @@ The server automatically maps human-readable names to Data Commons IDs:
 "France" → country/FRA
 ```
 
-## Two-Step Workflow
-
-The Data Commons MCP server enforces a two-step workflow for data quality:
-
-### Why Two Steps?
-
-1. **Validation**: Ensures variable-place combinations have available data
-2. **Discovery**: Explore related variables and topics before fetching data
-3. **Efficiency**: Avoid failed queries by validating first
-4. **Context**: Get metadata and data sources before retrieval
-
-### Workflow Diagram
-
-```
-User Query
-    ↓
-Step 1: search_indicators
-    - Natural language query
-    - Place names (human-readable)
-    - Returns candidate variables
-    - Returns place DCIDs
-    - Returns data availability
-    ↓
-Review Results & Select
-    ↓
-Step 2: get_observations
-    - Variable DCID (from step 1)
-    - Place DCID (from step 1)
-    - Date filters
-    - Returns time series data
-```
-
 ## API Integration
 
 This server integrates with the Data Commons API:
@@ -333,16 +301,6 @@ Data Commons aggregates data from trusted sources:
 - **UN** - United Nations statistical databases
 - **EPA** - Environmental Protection Agency data
 - **And many more...**
-
-## Error Handling
-
-The server includes comprehensive error handling:
-
-- **Input Validation**: All parameters are validated
-- **API Errors**: Network and API errors are caught with descriptive messages
-- **Timeout Handling**: Reasonable timeouts for API requests
-- **Graceful Degradation**: Partial failures handled appropriately
-- **Detailed Error Messages**: Context included in error responses
 
 ## Common Issues
 
