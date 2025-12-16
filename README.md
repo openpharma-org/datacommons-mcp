@@ -30,7 +30,7 @@ Add to your MCP client configuration (e.g., Claude Desktop):
   "mcpServers": {
     "datacommons": {
       "command": "node",
-      "args": ["path/to/datacommons-mcp/src/index.js"],
+      "args": ["path/to/datacommons-mcp-server/build/index.js"],
       "env": {
         "DC_API_KEY": "your_api_key_here"
       }

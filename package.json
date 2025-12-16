@@ -2,14 +2,14 @@
   "name": "@openpharma-org/datacommons-mcp",
   "version": "1.0.0",
   "description": "MCP server for Data Commons - statistical and demographic data access. Provides search and retrieval of population statistics, disease burden data, epidemiological indicators, and economic metrics from Data Commons Knowledge Graph.",
-  "main": "src/index.js",
+  "main": "build/index.js",
   "bin": {
-    "datacommons-mcp": "src/index.js"
+    "datacommons-mcp": "build/index.js"
   },
   "scripts": {
-    "start": "node src/index.js",
-    "build": "mkdir -p dist && cp -r src/* dist/",
-    "prebuild": "rm -rf dist"
+    "build": "mkdir -p build && cp -r src/* build/",
+    "clean": "rm -rf build",
+    "start": "npm run build && node build/index.js"
   },
   "keywords": [
     "mcp",
@@ -35,7 +35,7 @@
     "node": ">=18.0.0"
   },
   "files": [
-    "src/",
+    "build/",
     "README.md",
     "LICENSE"
   ]
