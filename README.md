@@ -19,11 +19,7 @@ A Model Context Protocol (MCP) server providing access to the Data Commons knowl
 - **Topic Hierarchy** - Explore related statistical variables through topic organization
 - **Flexible Date Filtering** - Retrieve latest data, all historical data, or specific date ranges
 
-## Configuration
-
-### MCP Client Setup
-
-Add to your MCP client configuration (e.g., Claude Desktop):
+## Usage
 
 ```json
 {
@@ -39,12 +35,7 @@ Add to your MCP client configuration (e.g., Claude Desktop):
 }
 ```
 
-### Environment Variables
-
-- `DC_API_KEY` (optional): Data Commons API key for enhanced rate limits
-  - Not required for basic functionality
-  - Recommended for high-volume usage
-  - Get your API key at: https://apikeys.datacommons.org/
+`DC_API_KEY` (optional): Data Commons API key for enhanced rate limits. Get your API key at: https://apikeys.datacommons.org/
 
 ## Available Tools
 
@@ -325,4 +316,3 @@ Data Commons aggregates data from trusted sources:
 
 - **Data Commons**: https://datacommons.org/
 - **Data Commons API Documentation**: https://docs.datacommons.org/api/
-- **OpenPharma GitHub**: https://github.com/openpharma-org
