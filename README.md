@@ -35,7 +35,7 @@ A Model Context Protocol (MCP) server providing access to the Data Commons knowl
 }
 ```
 
-`DC_API_KEY` (optional): Data Commons API key for enhanced rate limits. Get your API key at: https://apikeys.datacommons.org/
+**Note**: `DC_API_KEY` is optional. Get Data Commons API key for enhanced rate limits at https://apikeys.datacommons.org/
 
 ## Available Tools
 
